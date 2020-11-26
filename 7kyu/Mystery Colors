@@ -1,0 +1,21 @@
+import java.util.List;
+import java.util.HashSet;
+
+public class MysteryColorAnalyzerImpl implements MysteryColorAnalyzer{
+  
+  public int numberOfDistinctColors(List<Color> mysteryColors){
+       return new HashSet<>(mysteryColors).size();
+  }
+  
+  public int colorOccurrence(List<Color> mysteryColors, Color color){
+       int number = 0;
+    
+       for(Color input : mysteryColors){
+           if(input == color){
+              number++;
+            }
+        }
+    
+    return number;
+  }
+}
