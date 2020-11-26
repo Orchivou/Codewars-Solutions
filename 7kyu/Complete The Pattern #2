@@ -1,0 +1,17 @@
+public class CompleteThePattern {
+    public static String pattern (int n) {
+      String res = "";
+      for(int i=n; i>0; i--) {
+           int tmp = n;
+        
+          for(int j=i; j>0; j--) {
+              res += tmp--;
+          }
+        
+          if(i>1) {
+             res += "\n";
+          }
+      }
+        return res;
+    }
+}
