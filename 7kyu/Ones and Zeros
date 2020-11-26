@@ -1,0 +1,21 @@
+import java.util.List;
+
+public class BinaryArrayToNumber {
+
+    public static int ConvertBinaryArrayToInt(List<Integer> binary) {
+      
+      int x = binary.size()-1;
+      int digit = 0;
+        
+       for(int i = 0; i < binary.size(); i++){
+         
+         int temp = binary.get(i);
+         digit += temp*Math.pow(2,x);
+         x--;
+         
+       }
+      
+      return digit;
+      
+    }
+}
