@@ -1,0 +1,11 @@
+class Kata {
+    static String noSpace(final String x) {
+      
+      String answer = "";
+    
+        
+        answer = x.replaceAll(" ", "");        
+      
+        return answer;
+    }
+}
