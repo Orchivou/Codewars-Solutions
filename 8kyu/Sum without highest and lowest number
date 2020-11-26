@@ -1,0 +1,33 @@
+import java.util.Arrays;
+
+public class Kata{
+  
+  public static int sum(int[] numbers){
+    
+    int max = 0;
+    int min = 10;
+    int sum = 0;
+    
+    if(numbers == null|| numbers.length == 1 || numbers.length == 0){
+      return 0;
+    }
+    
+    Arrays.sort(numbers);
+    
+    numbers[0] = 0;
+    numbers[numbers.length-1] = 0;
+    
+    for(int i = 0; i < numbers.length; i++){
+      
+      if(numbers[i] != 0){
+        
+        sum += numbers[i];
+        
+      }
+      
+    }
+    
+    return sum;
+    
+  }
+}
