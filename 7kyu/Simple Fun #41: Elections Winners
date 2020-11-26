@@ -1,0 +1,22 @@
+class ElectionWinners {
+    static int find(final int[] votes, final int k) {
+    int bigger = 0;
+    int possibleWinners = 0;
+    for (int i = 0; i < votes.length; i++) {
+      for (int j = 0; j < votes.length; j++) {
+        if (i == j) {
+          continue;
+        }
+        if (votes[i] + k > votes[j]) {
+          bigger++;
+        }
+      }
+      if (bigger == votes.length - 1) {
+        possibleWinners++;
+
+      }
+      bigger = 0;
+    }
+    return possibleWinners;
+  }
+}
