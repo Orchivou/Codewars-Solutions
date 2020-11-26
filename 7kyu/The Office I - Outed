@@ -1,0 +1,20 @@
+public class TheOffice {
+  public static String outed(Person[] meet, String boss) {
+     double rating = 0;
+    
+     for (Person a : meet) {
+       
+         rating += a.happiness; 
+       
+         if (a.name.equals(boss)) {
+            rating += a.happiness;
+         }
+     }
+    
+    if (rating/meet.length <= 5 ) {
+        return "Get Out Now!";
+    }else{
+        return "Nice Work Champ!";
+    }
+  }
+}
