@@ -1,0 +1,49 @@
+public class Hex {
+    private int value;
+
+    public Hex(int value) {
+        this.value = value;
+    }
+
+    public int valueOf() {
+        return value;
+    }
+
+    public String toJSON() {
+        return toString();
+    }
+
+    public String toString() {
+        return "0x" + Integer.toHexString(value).toUpperCase();
+    }
+
+    public Hex plus(Hex other) {
+        return new Hex (value + other.value);
+    }
+
+    public Hex minus(Hex other) {
+        return new Hex (value - other.value);
+    }
+
+    public Hex plus(int number) {
+        return new Hex (value + number);
+    }
+
+    public Hex minus(int number) {
+        return new Hex (value - number);
+    }
+
+    public static int parse(String string) {    
+        String[] hex = string.split("0x");
+      
+        if (hex.length >= 2){
+            return Integer.parseInt(hex[1], 16);
+        }else{
+            return Integer.parseInt(hex[0], 16);
+        }
+    }
+
+    public boolean equals(Object other) {
+        return value == Integer.parseInt(String.valueOf(other).split("0x")[1], 16);
+    }
+}
