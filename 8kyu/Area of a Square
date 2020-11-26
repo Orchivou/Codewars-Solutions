@@ -1,0 +1,9 @@
+public class Geometry{
+  public static double squareArea(double A){
+    
+   double R = 2*A/Math.PI;
+   double bigR = R*R;
+   double area = Math.round(bigR * 100.0) / 100.0;
+   return area;
+  }
+}
