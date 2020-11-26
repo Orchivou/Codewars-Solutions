@@ -1,0 +1,10 @@
+public class Dinglemouse {
+
+    public static String[] split(final String joint) {     
+        if (joint.length() == 0) {
+            return new String[0];
+        }
+        
+        return joint.split("\\.", -1);
+    }
+}
