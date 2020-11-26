@@ -1,0 +1,17 @@
+public class GrassHopper {
+
+    public static int summation(int n) {
+      
+      int answer = 0;
+      int count = 1;
+      
+      for(int i = 0; i < n; i++){
+        
+        answer += count;
+        count++;
+        
+      }
+
+        return answer;
+    }
+}
