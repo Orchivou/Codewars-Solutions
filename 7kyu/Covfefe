@@ -1,0 +1,12 @@
+public class Covfefe {
+    public static String covfefe(String tweet) {
+      
+        if (tweet.contains("coverage")) {
+            tweet = tweet.replace("coverage", "covfefe");
+        } else {
+            tweet += " covfefe";
+        }
+      
+        return tweet;
+    }
+}
