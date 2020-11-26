@@ -1,0 +1,15 @@
+public class Kata {
+  public static boolean CheckIfFlush(String[] cards) {
+       int ss = 0, qq=0, kk=0, aa =0;
+    
+       for(int i = 0; i<cards.length; i++) {
+           if( cards[i].contains("S") ) ss++;
+           if( cards[i].contains("H") ) qq++;
+           if( cards[i].contains("D") ) kk++;
+           if( cards[i].contains("C") ) aa++; 
+       }
+    
+       if (ss==cards.length || qq==cards.length || kk==cards.length || aa==cards.length) return true;
+       else return false;
+  }
+}
