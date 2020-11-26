@@ -1,0 +1,18 @@
+public class Kata {
+
+  public static String solution(String str) {
+    
+    String answer = "";
+    int count = str.length()-1;
+    
+    
+    for(int i = count; i >= 0; i--){
+      
+      answer += str.charAt(i);
+      
+    }
+    
+    return answer;
+  }
+
+}
