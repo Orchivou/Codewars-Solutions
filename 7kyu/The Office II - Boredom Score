@@ -1,0 +1,50 @@
+public class TheOffice {
+  public static String boredom(Person[] staff) {
+    int result = 0;
+    
+    for (Person a : staff) {
+      switch (a.department) {
+          
+        case "accounts": 
+          result += 1; 
+          break;
+        case "finance":
+          result += 2; 
+          break; 
+        case "canteen":
+          result += 10; 
+          break; 
+        case "regulation":
+          result += 3; 
+          break; 
+        case "trading":
+          result += 6; 
+          break; 
+        case "change":
+          result += 6; 
+          break; 
+        case "IS":
+          result += 8; 
+          break; 
+        case "retail":
+          result += 5; 
+          break; 
+        case "cleaning":
+          result += 4; 
+          break; 
+        case "pissing about":
+          result += 25; 
+          break; 
+      }
+    }
+    
+    if (result <= 80){
+      return "kill me now";
+    }
+    if(result > 99){
+      return "party time!!";
+    }else{
+      return "i can handle this";
+    }
+  }
+}
